@@ -1,0 +1,31 @@
+From faf3916fa53412cf402e8d178b55da9c2937691c Mon Sep 17 00:00:00 2001
+From: guest <guest@mailbox.com>
+Date: Tue, 9 May 2017 21:46:56 +0000
+Subject: [PATCH] product: qcom-display: do not set opengles version
+
+Change-Id: I18d3b1196388357ca679dc47f5b1b1a64759afde
+---
+ product/qcom-display.mk | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+diff --git a/product/qcom-display.mk b/product/qcom-display.mk
+index ce64a90..05188cd 100644
+--- a/product/qcom-display.mk
++++ b/product/qcom-display.mk
+@@ -19,13 +19,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
+     persist.hwc.mdpcomp.enable=true \
+     persist.hwc.ptor.enable=true \
+     debug.enable.sglscale=1
+-
+-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8916)
+-PRODUCT_PROPERTY_OVERRIDES += \
+-    ro.opengles.version=196608
+-else
+-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8939)
+-PRODUCT_PROPERTY_OVERRIDES += \
+-    ro.opengles.version=196609
+-endif
+-endif
+-- 
+2.11.0
+
