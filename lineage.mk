@@ -18,6 +18,10 @@ $(call inherit-product, device/xiaomi/ferrari/full_ferrari.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+# patch stuff up
+$(info $(shell echo device/xiaomi/ferrari/patches/reset.sh))
+$(info $(shell echo device/xiaomi/ferrari/patches/apply.sh))
+
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8939
 
