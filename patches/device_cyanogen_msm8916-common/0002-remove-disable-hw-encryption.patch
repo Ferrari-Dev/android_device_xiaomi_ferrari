@@ -1,0 +1,20 @@
+From f982d1c7d42bc4ff863d818f4aeecef20ebbe7c7 Mon Sep 17 00:00:00 2001
+From: guest <guest@mailbox.com>
+Date: Sun, 28 May 2017 04:24:10 +0000
+Subject: [PATCH] remove disable hw encryption
+
+Change-Id: Ic0dd96c8ca42e3f11556d03e607b58daad59a55e
+---
+ board/qcom-crypto.mk | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/board/qcom-crypto.mk b/board/qcom-crypto.mk
+index 4039ab7..48d45aa 100644
+--- a/board/qcom-crypto.mk
++++ b/board/qcom-crypto.mk
+@@ -1,2 +1 @@
+-TARGET_HW_DISK_ENCRYPTION := true
+ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+-- 
+2.11.0
+
